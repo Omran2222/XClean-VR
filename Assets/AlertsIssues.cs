@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AlertsIssues : MonoBehaviour
 {
-    public string SceneIssue;
+    public GameObject Panel;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class AlertsIssues : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneIssue);
+            Panel.SetActive(true);
         }
     }
 }
